@@ -7,12 +7,13 @@ import java.io.OutputStream;
 
 public class MyGenerate {
 
+	private static String className = "UserInfo";
+
 	private static String packageNameService = "com.wuying.ssm.service";
 	private static String packageNameServiceImpl = "com.wuying.ssm.service.impl";
 	private static String packageNameModel = "com.wuying.ssm.model";
 	private static String packageNameController = "com.wuying.ssm.controller";
 	private static String javaProject = "src/main/java";
-	private static String className = "UserInfo";
 
 
 	public static void getService() {
