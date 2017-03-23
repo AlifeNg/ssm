@@ -2,6 +2,7 @@ package com.wuying.ssm.service.impl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
@@ -13,6 +14,8 @@ import tk.mybatis.mapper.util.StringUtil;
 
 @Service
 public class CountryServiceImpl extends BaseServiceImpl<Country> implements CountryService {
+
+    private Logger logger = Logger.getLogger(this.getClass().getName());
 
 	@Override
     public List<Country> selectByCountry(Country country, int page, int rows) {
