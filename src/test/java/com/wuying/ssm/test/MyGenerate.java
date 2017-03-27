@@ -7,7 +7,7 @@ import java.io.OutputStream;
 
 public class MyGenerate {
 
-	private static String className = "UserInfo";
+	private static String className = "User";
 
 	private static String packageNameService = "com.wuying.ssm.service";
 	private static String packageNameServiceImpl = "com.wuying.ssm.service.impl";
@@ -85,9 +85,14 @@ public class MyGenerate {
 		}
 	}
 
-	private static void outputToFile(String packageName, String fileName, String content) {    
-		String path = System.getProperty("user.dir") + "\\" +  javaProject + "\\" + packageName.replace(".", "\\") + "\\";
-        OutputStream os = null;    
+	private static void outputToFile(String packageName, String fileName, String content) {
+		String path = "";
+		if(System.getProperty("os.name").indexOf("Mac") >= 0){
+			 path = System.getProperty("user.dir") + "/" +  javaProject + "/" + packageName.replace(".", "/") + "/";
+		} else {
+			path = System.getProperty("user.dir") + "\\" +  javaProject + "\\" + packageName.replace(".", "\\") + "\\";
+		}
+        OutputStream os = null;
         try {    
             os = new FileOutputStream(path+fileName);    
         } catch (FileNotFoundException e1) {    
@@ -125,3 +130,4 @@ public class MyGenerate {
 		getController();
 	}
 }
+;
