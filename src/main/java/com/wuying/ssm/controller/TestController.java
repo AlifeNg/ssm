@@ -19,15 +19,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test() {
-        Country country = new Country();
-        country.setCountrycode("123");
-
-        // System.out.println(JSONArray.toJSONString(countryService.selectAll()));
-        System.out.println(JSONArray.toJSONString(countryService.selectByCountry(country, 1, 1)));
-        // System.out.println(JSONArray.toJSONString(countryService.selectPage(1,2)));
-        logger.info("----------------------------------------------"
-                + JSONArray.toJSONString(countryService.selectByCountry(country, 1, 1)));
-        // System.out.println(country.getCountrycode());
         return "test";
     }
 }
