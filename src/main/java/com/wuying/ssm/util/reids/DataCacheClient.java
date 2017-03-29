@@ -10,7 +10,7 @@
  * Version   Author      Date            Operation 
  * 1.0	  baoxu   2015年3月31日下午4:55:33	       Create	
  */
-package com.wuying.ssm.util;
+package com.wuying.ssm.util.reids;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;

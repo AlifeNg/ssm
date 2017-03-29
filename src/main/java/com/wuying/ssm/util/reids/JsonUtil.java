@@ -1,4 +1,4 @@
-package com.wuying.ssm.util;
+package com.wuying.ssm.util.reids;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.*;
@@ -107,10 +107,5 @@ public class JsonUtil {
             logger.error("生成json字符串发生异常！对象为：" + o, e);
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(JsonUtil.serialize(null));
-        System.out.println(JsonUtil.serialize("haha"));
     }
 }

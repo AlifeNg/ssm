@@ -1,4 +1,4 @@
-package com.wuying.ssm.util;
+package com.wuying.ssm.util.reids;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;

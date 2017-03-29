@@ -1,7 +1,6 @@
 package com.wuying.ssm.test;
 
-import com.wuying.ssm.util.DataCacheClient;
-import org.junit.*;
+import com.wuying.ssm.util.reids.DataCacheClient;
 
 /**
  * Created by wuying on 2017/3/29.

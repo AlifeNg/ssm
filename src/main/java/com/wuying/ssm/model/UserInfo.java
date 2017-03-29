@@ -1,11 +1,17 @@
 package com.wuying.ssm.model;
 
+import org.mongodb.morphia.annotations.Entity;
+
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.persistence.Id;
 
 @Table(name = "user_info")
+@Entity(noClassnameStored = true, value = "UserInfo")
 public class UserInfo implements Serializable {
+
     @Id
+    @org.mongodb.morphia.annotations.Id
     private Integer id;
 
     private String username;
