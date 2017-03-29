@@ -1,17 +1,9 @@
-package com.yunjun.auto.datacache.common.redis;
+package com.wuying.ssm.util;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.yunjun.auto.common.utils.PropertiesUtils;
-
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.jedis.Pipeline;
-import redis.clients.jedis.Protocol;
+import redis.clients.jedis.*;
 import redis.clients.jedis.exceptions.JedisException;
 
 import java.util.List;
@@ -30,7 +22,6 @@ public class RedisClient {
 
     private static Logger logger = LoggerFactory.getLogger(RedisClient.class);
 
-    @Autowired
     private static JedisPool jedisPool;
 
     private static void initJedisPool() {

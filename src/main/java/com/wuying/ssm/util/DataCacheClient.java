@@ -10,10 +10,7 @@
  * Version   Author      Date            Operation 
  * 1.0	  baoxu   2015年3月31日下午4:55:33	       Create	
  */
-package com.yunjun.auto.datacache.common;
-
-import com.yunjun.auto.common.utils.JsonUtil;
-import com.yunjun.auto.datacache.common.redis.RedisClient;
+package com.wuying.ssm.util;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -30,13 +27,9 @@ public class DataCacheClient {
     private static final Logger logger = LoggerFactory
             .getLogger(DataCacheClient.class);
 
-    // private static Map<String, CacheObject> cacheMap = new HashMap<String,
-    // CacheObject>();
 
     public static void insertCache(String cacheKey, Object cacheValue) {
         try {
-            // CacheObject cacheO = new CacheObject(cacheValue,cacheKey);
-            // cacheMap.put(cacheKey, cacheO);
             if (cacheValue instanceof String) {
                 RedisClient.addStringToJedis(cacheKey, (String) cacheValue);
             } else {
@@ -51,9 +44,6 @@ public class DataCacheClient {
     public static void insertCache(String cacheKey, Object cacheValue,
             int dueTime) {
         try {
-            // CacheObject cacheO = new CacheObject(cacheValue,cacheKey,
-            // dueTime);
-            // cacheMap.put(cacheKey, cacheO);
             if (cacheValue instanceof String) {
                 RedisClient.addStringToJedis(cacheKey, (String) cacheValue,
                                              dueTime);
@@ -101,7 +91,6 @@ public class DataCacheClient {
      * @throws Exception
      */
     public static void deleteFromCache(String key) throws Exception {
-        // cacheMap.remove(key);
         RedisClient.delKeyFromJedis(key);
     }
 
